@@ -1,32 +1,31 @@
-# 一键更改 Trojan-Panel 面板端口并设置伪装站点
-
+# Un clic para cambiar el puerto del panel Trojan-Panel y configurar un sitio de camuflaje
 
 ![image](https://github.com/V2RaySSR/Trojan_panel_web/raw/master/image.png)
 
 
- # 脚本介绍
+ # Introducción al guion
  
- 下面这些功能是 Jrohy大神 Trojan多用户管理部署程序的基本功能
-  - 在线web页面和命令行两种方式管理trojan多用户
-  - 启动 / 停止 / 重启 trojan 服务端
-  - 支持流量统计和流量限制
-  - 命令行模式管理, 支持命令补全
-  - 集成acme.sh证书申请
-  - 生成客户端配置文件
-  - 支持trojan://分享链接和二维码分享(二维码仅限web页面)
+ Las siguientes funciones son las funciones básicas del programa de implementación de gestión multiusuario Jrohy Trojan
+  - Administre troyanos múltiples usuarios de dos maneras: página web en línea y línea de comandos
+  - Iniciar / detener / reiniciar el servidor troyano
+  - Admite estadísticas de tráfico y límite de tráfico
+  - Gestión del modo de línea de comandos, finalización de comandos de soporte
+  - Aplicación de certificado acme.sh integrada
+  - Generar archivo de configuración del cliente
+  - Soporte trojan: // enlace para compartir y compartir código QR (el código QR solo está disponible en páginas web)
 
 
- # 脚本代码
+ # Código de secuencia de comandos
  
- 一键更改 Trojan-Panel 面板端口并设置伪装站点
+ 一Cambio de clave Trojan-Panel Puerto del panel y configuración del sitio de camuflaje
  
 
 ```bash
 wget -N --no-check-certificate "https://raw.githubusercontent.com/V2RaySSR/Trojan_panel_web/master/trojan-web-panel.sh" && chmod +x trojan-web-panel.sh && ./trojan-web-panel.sh
 ```
 
- # 相关文章及视频
+ # Artículos y videos relacionados
 
-Trojan搭建多用户面板并设置伪装站点：https://www.v2rayssr.com/trojanpanel.html
+Trojan crea un panel multiusuario y configura un sitio de camuflaje：https://www.v2rayssr.com/trojanpanel.html
 
-脚本交流电报群：https://t.me/bozaiweb
+Guión AC Telegram Group：https://t.me/bozaiweb
