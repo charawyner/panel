@@ -44,7 +44,7 @@ if test -s /etc/systemd/system/trojan-web.service; then
 	green " "
 	green " "
 	green "================================="
-	 blue "  检测到Trojan面板服务，开始配置"
+	 blue "  Se detectó el servicio del panel de troyano, iniciar la configuración "
 	green "================================="
 	sleep 2s
 	$systemPackage update -y
@@ -55,13 +55,13 @@ if test -s /etc/nginx/nginx.conf; then
 	rm -rf /etc/nginx/nginx.conf
   wget -P /etc/nginx https://raw.githubusercontent.com/V2RaySSR/Trojan_panel_web/master/nginx.conf
 	green "================================="
-	blue "     请输入Trojan绑定的域名"
+	blue "     Introduzca el nombre de dominio vinculado por Trojan "
 	green "================================="
 	read your_domain
   sed -i "s/localhost/$your_domain/;" /etc/nginx/nginx.conf
 	green " "
 	green "================================="
-	 blue "    开始下载伪装站点源码并部署"
+	 blue "   Comience a descargar e implementar el código fuente del sitio falso "
 	green "================================="
 	sleep 2s
 	rm -rf /usr/share/nginx/html/*
@@ -70,7 +70,7 @@ if test -s /etc/nginx/nginx.conf; then
 	unzip web.zip
 	green " "
 	green "================================="
-	blue "       开始配置trojan-web"
+	blue "       Comience a configurar trojan-web "
 	green "================================="
 	sleep 2s
   sed -i '/ExecStart/s/trojan web -p 81/trojan web/g' /etc/systemd/system/trojan-web.service
@@ -83,24 +83,24 @@ if test -s /etc/nginx/nginx.conf; then
   green " "
 	green "=================================================================="
 	green " "
-	 blue "  WIN / MAC 通用客户端下载、本脚本更多介绍内容 "
+	 blue "  Descarga del cliente universal WIN / MAC, más introducción a este script "
 	 blue "  https://www.v2rayssr.com/trojanpanel.html "
 	green " "
-	 blue "  脚本交流电报群：https://goii.cc/tg"
+	 blue "  Guión AC Telegram Group：https://goii.cc/tg"
 	green " "
-	 blue "  伪装站点目录 /usr/share/nginx/html "
-	 blue "  面板管理地址 http://$your_domain:81 "
+	 blue "  Disfraz de Site Directory /usr/share/nginx/html "
+	 blue "  Dirección de gestión del panel http://$your_domain:81 "
 	green "=================================================================="
 else
 	green "==============================="
-	  red "     Nginx未正确安装 请重试"
+	  red "     Nginx no está instalado correctamente, inténtelo de nuevo "
 	green "==============================="
 	sleep 2s
 	exit 1
 fi
 else
 	green "==============================="
-	  red "    未检测到Trojan面板服务"
+	  red "    Trojan Panel Service no detectado "
 	green "==============================="
 	sleep 2s
 	exit 1
@@ -120,21 +120,21 @@ trojan_install(){
 start_menu(){
   clear
 	green "=========================================================="
-   blue " 本脚本支持：Debian9+ / Ubuntu16.04+ / Centos7+"
-	 blue " 网站：www.v2rayssr.com （已开启禁止国内访问）"
-	 blue " YouTube频道：波仔分享"
-	 blue " 本脚本禁止在国内任何网站转载"
+   blue " Este script admite este script: Debian9 + / Ubuntu16.04 + / Centos7 + "
+	 blue " Sitio web: www.v2rayssr.com (el acceso nacional está prohibido) "
+	 blue " Canal de YouTube: Pozai Share "
+	 blue " Está prohibido reproducir este script en cualquier sitio web en China."
 	green "=========================================================="
-   blue " 简介：一键更改 Trojan-Panel 面板端口并设置伪装站点"
+   blue " Introducción: un clic para cambiar el puerto del panel Trojan-Panel y configurar un sitio falso "
 	green "=========================================================="
-	  red " 运行本脚本之前请确认已经安装Jrohy大神的面板程序"
+	  red " Antes de ejecutar este script, asegúrese de haber instalado el programa del panel de Jrohy"
 	green "=========================================================="
-	 blue " 1. Jrohy大神的 Trojan 多用户管理部署程序"
-   blue " 2. 更改 Trojan 面板端口并设置伪装站点"
-   blue " 3. 安装 BBRPlus4 合一加速"
-   blue " 0. 退出脚本"
+	 blue " 1.  Programa de implementación de gestión multiusuario rojan de TJrohy"
+   blue " 2. Cambie el puerto del panel troyano y configure un sitio falso "
+   blue " 3. Instale BBRPlus4 en una aceleración "
+   blue " 0. Salir de la secuencia de comandos "
     echo
-    read -p "请输入数字:" num
+    read -p "Ingrese un número: "num
     case "$num" in
     1)
 		trojan_install
@@ -150,7 +150,7 @@ start_menu(){
 		;;
 		*)
 	clear
-	echo "请输入正确数字"
+	echo "Introduzca el número correcto "
 	sleep 2s
 	start_menu
 	;;
