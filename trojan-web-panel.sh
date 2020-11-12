@@ -134,7 +134,7 @@ start_menu(){
    blue " 3. Instale BBRPlus4 en una aceleración "
    blue " 0. Salir de la secuencia de comandos "
     echo
-    read -p "Ingrese un número: "num
+    read -p "Ingrese un número: "
     case "$num" in
     1)
 		trojan_install
